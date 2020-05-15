@@ -135,7 +135,7 @@ def main(args):
     global ull, iterations
 
     # Read the RNG iterations count for each landscape.
-    with open('iterations.bin', 'rb') as f:
+    with open(sys.path[0] + '/iterations.bin', 'rb') as f:
         iterations = struct.unpack("<{}h".format(num_landscapes), f.read())
 
     if args.all:
