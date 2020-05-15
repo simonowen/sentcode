@@ -140,10 +140,10 @@ def main(args):
 
     if args.all:
         print_all(args.extended)
-    elif args.landscape >= 0 and args.landscape < num_landscapes:
-        print_one(args.landscape)
     elif args.landscape == None:
         parser.print_help()
+    elif args.landscape >= 0 and args.landscape < num_landscapes:
+        print_one(args.landscape)
     else:
         print("Landscape number must be in range {:04X}-{:04X}".format(0, num_landscapes - 1))
 
